@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import VoiceSynthesizer from './Components/VoiceSynthesizer';
 
@@ -28,24 +27,21 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">  
-          <div class="row container">
-            <div class="input-field col s6 hallo">
-                <input value={this.state.textoAdd} onChange={this.addText}/>
-                <button onClick={this.sayMyText}>Submit</button>
-            </div>
-         
-              {/*<input type="textarea" onChange={this.addText} value={this.state.textoAdd} />*/}
-              {/* <button onClick={this.sayMyText} >submit</button>*/}
-       
+      <div className="App">
+        <div className="container">  
+            <form className  ="row input-field col-s6 ">
+              <img src="./avatar.png" alt="avatar"/>
+              <input value={this.state.textoAdd} onChange={this.addText} placeholder="type anyting"/>
+              <button onClick={this.sayMyText}>Submit</button>
+            </form>
          </div>
            <VoiceSynthesizer
              text={this.state.text}
              voice={this.state.voice}
              pitch={this.state.pitch}
              rate={this.state.rate} />
-
-      </div>  
+      </div>
+       
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const Speech = (props) => {
+  const Speech = (props) => {
   // https://codeshare.io/G87lDZ
   const synth = window.speechSynthesis;
   const utterThis = new SpeechSynthesisUtterance(props.text);
@@ -22,7 +22,6 @@ const Speech = (props) => {
 }
 
 export default class VoiceSynthesizer extends React.Component {
-	//here when we commentout the cat will repeat the sentence forevor
 shouldComponentUpdate(nextProps){
 	return nextProps.text !== this.props.text
 }
